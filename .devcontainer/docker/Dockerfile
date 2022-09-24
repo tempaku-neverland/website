@@ -31,10 +31,10 @@ RUN \
 RUN \
   apt-get update -y && \
   apt-get install --no-install-recommends -y \
-  fish=3.1.2-3 \
+  fish=3.1.2-3+deb11u1 \
   less=551-2 \
   ca-certificates=20210119 \
-  curl=7.74.0-1.3+deb11u2 && \
+  curl=7.74.0-1.3+deb11u3 && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   gosu ${USERNAME} fish -c ' \
