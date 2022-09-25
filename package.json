@@ -26,6 +26,7 @@
     "lint:package-json": "prettier-package-json --success --list-different {.,./backend}/package.json",
     "lint:prettier": "prettier --check .",
     "test": "run-s -c test:*",
+    "test:frontend": "npm test --workspace frontend",
     "test:backend": "npm test --workspace backend"
   },
   "workspaces": [
