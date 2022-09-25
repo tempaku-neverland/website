@@ -15,6 +15,7 @@
   },
   "scripts": {
     "format": "run-s -c format:*",
+    "format:frontend": "npm run format --workspace frontend",
     "format:backend": "npm run format --workspace backend",
     "format:package-json": "prettier-package-json --success --write {.,./backend}/package.json",
     "format:prettier": "prettier --write .",
