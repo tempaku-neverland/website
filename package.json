@@ -15,16 +15,16 @@
   },
   "scripts": {
     "format": "run-s -c format:*",
-    "format:backend": "npm run format --prefix backend",
+    "format:backend": "npm run format --workspace backend",
     "format:package-json": "prettier-package-json --success --write {.,./backend}/package.json",
     "format:prettier": "prettier --write .",
     "postinstall": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
     "lint": "run-s -c lint:*",
-    "lint:backend": "npm run lint --prefix backend",
+    "lint:backend": "npm run lint --workspace backend",
     "lint:package-json": "prettier-package-json --success --list-different {.,./backend}/package.json",
     "lint:prettier": "prettier --check .",
     "test": "run-s -c test:*",
-    "test:backend": "npm test --prefix backend"
+    "test:backend": "npm test --workspace backend"
   },
   "workspaces": [
     "backend"
