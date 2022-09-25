@@ -15,6 +15,7 @@
   },
   "scripts": {
     "format": "run-s -c format:*",
+    "format:backend": "npm run format --prefix backend",
     "format:package-json": "prettier-package-json --success --write {.,./backend}/package.json",
     "format:prettier": "prettier --write .",
     "postinstall": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
