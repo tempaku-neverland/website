@@ -19,9 +19,9 @@
     "format:prettier": "prettier --write .",
     "postinstall": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
     "lint": "run-s -c lint:*",
+    "lint:backend": "npm run lint --prefix backend",
     "lint:package-json": "prettier-package-json --success --list-different {.,./backend}/package.json",
     "lint:prettier": "prettier --check .",
-    "list:backend": "npm run lint --prefix backend",
     "test": "run-s -c test:*",
     "test:backend": "npm test --prefix backend"
   },
