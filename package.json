@@ -20,6 +20,7 @@
     "format:prettier": "prettier --write .",
     "postinstall": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
     "lint": "run-s -c lint:*",
+    "lint:frontend": "npm run lint --workspace frontend",
     "lint:backend": "npm run lint --workspace backend",
     "lint:package-json": "prettier-package-json --success --list-different {.,./backend}/package.json",
     "lint:prettier": "prettier --check .",
@@ -27,6 +28,7 @@
     "test:backend": "npm test --workspace backend"
   },
   "workspaces": [
+    "frontend",
     "backend"
   ],
   "dependencies": {
