@@ -10,11 +10,5 @@ services:
       - ..:/workspace
       - node_modules:/workspace/node_modules # volume trick
 
-  scylla:
-    image: scylladb/scylla
-    command: |
-      --alternator-port 8000 \
-      --alternator-write-isolation only_rmw_uses_lwt
-
 volumes:
   node_modules:
