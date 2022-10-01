@@ -20,5 +20,6 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/no-default-export": "off",
     "@typescript-eslint/explicit-module-boundary-types": "error",
+    "react/function-component-definition": "off",
   },
 };
